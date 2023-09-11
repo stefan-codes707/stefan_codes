@@ -1,0 +1,185 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap');
+/*=============== VARIABLES CSS ===============*/
+:root{
+  --background:#0A0B0E;
+  --blue-light:#84b6f4;
+}
+*{
+  padding:0; margin:0;
+  font-family: 'Jost', sans-serif;
+  color:#fff;
+  box-sizing: border-box;
+}
+body{
+  background:var(--background) !important;
+  padding:0; margin:0;
+}
+.row{margin:0 !important; padding:0 !important;}
+
+/*================    HEADER    =================*/
+.header .navbar{padding:10px 0;}
+.header ul.navbar-nav {
+  flex-direction: row;
+}
+.header .navbar-nav .nav-link {
+  padding:0 8px;
+  color: #fff;
+}
+.header .navbar-brand{
+  color:#84b6f4;
+  font-size: 1.5em;
+}
+.header .nav-link.active{
+  color: #84b6f4 !important;
+}
+
+/*====================   HOME  ========================*/
+.home{padding: 80px; background: #131416 !important;}
+
+.home .col-6{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home .img-photo{
+  width:350px; height: 350px;
+  
+  position: relative;
+  overflow: hidden;
+  animation:animat_after 8s ease-in-out infinite;
+}
+.home .img-photo img{
+  position: relative;
+  z-index:10;
+}
+.home .img-photo:before{
+  position: absolute;
+  content: "";
+  inset:0;
+  width:100%; height:100%;
+  background-color: #84b6f4;
+  z-index: 9;
+  animation:animat_before 8s ease-in-out infinite;
+}
+.home .img-photo:after{
+  position: absolute;
+  content: "";
+  inset:0;
+  z-index:5;
+  width:100%; height:100%;
+  background-color: #fff;
+  animation:animat_after 8s ease-in-out infinite;
+}
+/*ANIMATION*/
+@keyframes animate_before{
+  0%{border-radius: 42% 58% 35% 65% / 30% 30% 70% 70% ;}
+  50%{border-radius: 75% 25% 52% 48% / 51% 47% 53% 49% ;}
+  100%{border-radius: 42% 58% 35% 65% / 30% 30% 70% 70% ;}
+}
+@keyframes animate_after{
+  0%{border-radius:75% 25% 52% 48% / 51% 47% 53% 49% ;}
+  50%{border-radius:42% 58% 35% 65% / 30% 30% 70% 70%  ;}
+  100%{border-radius:75% 25% 52% 48% / 51% 47% 53% 49%   ;}
+}
+
+/**/
+.home .container-photo{
+  align-items: center;
+}
+
+
+.home span{font-size: 20px;}
+.home .h1 {font-size: 50px; letter-spacing: 2px;}
+.home .h1 span{ font-size:50px; font-weight: 300;}
+
+.home .button{margin-top:30px;}
+.home .button a, .about .button a{
+  text-decoration: none;
+  padding:8px 15px;
+  font-weight: 500;
+  font-size: 17px;
+  border-radius:3px;
+}
+.home .button .button-hire, .about .button a{
+  background-color: #84b6f4;
+  color:#fff;
+  margin-right:20px;
+}
+.home .button .button-contact{
+  color: #84b6f4;
+  border:1px solid #84b6f4;
+}
+/*==================  ABOUT ME  ================*/
+.about{
+  padding:60px 0 50px;
+}
+.about hr{opacity:1;}
+.about span{color: var(--blue-light);}
+.about .h2{font-weight: 400;}
+.about .p{font-weight: 300;}
+
+.about .container-buttons, .about .redes{
+  display:flex;
+  align-items: center;
+  margin-top:20px;
+}
+.about .redes hr{width:80px;}
+.about .redes{margin-left:40px;}
+.about .redes a{padding:0 9px;}
+
+.about .p a{text-decoration: none; color: var(--blue-light);}
+
+/*==================   QUALIFICATION  ======================*/
+.qualification{
+  padding:70px 0 60px; background: #131416 !important;
+}
+.qualification .col-6{padding:0 25px;}
+.qualification .title, .skills .title{ display: flex; align-items: center; flex-direction: column; margin-bottom:50px;}
+.qualification .title span, .skills .title span{ color: var(--blue-light);}
+
+.qualification .h3{
+  display: flex;
+  justify-content: center;
+  font-size: 23px; font-weight: 300;
+}
+.qualification .h4{
+  display: flex;
+  justify-content: space-between;
+  font-size: 23px; font-weight: 400;
+  margin:20px 0 25px;
+  letter-spacing: 2px;
+}
+.qualification .h4 span{
+  font-size: 18px; font-weight: 400;
+}
+
+/*==================   SKILLS  ======================*/
+.skills{padding:60px 0 50px;}
+.skills img{
+  width: 80px; 
+}
+.skills .col-2{display: flex; justify-content: center; align-items: center; margin:20px 0;}
+
+
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+}
+
+/* For small devices */
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 450px) {
+}
